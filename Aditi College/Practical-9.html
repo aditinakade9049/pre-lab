@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Demo Page</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Multi-column section */
+        .columns {
+            column-count: 3;
+            column-gap: 30px;
+            padding: 20px;
+        }
+
+        .columns p {
+            background: white;
+            padding: 15px;
+            margin: 0 0 15px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .columns p:hover {
+            transform: scale(1.05) rotate(1deg);
+        }
+
+        /* Icons section */
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            padding: 30px;
+        }
+
+        .icon-box {
+            text-align: center;
+            transition: transform 0.4s;
+        }
+
+        .icon-box i {
+            font-size: 40px;
+            color: #4facfe;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-10px) scale(1.2);
+        }
+
+        /* Button animation */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #4facfe;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .btn:hover {
+            background: #00c6ff;
+            transform: scale(1.1);
+        }
+
+        /* Keyframe animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS3 Modern Webpage</h1>
+    <p>Using Columns, Fonts, Icons, Animations & Transformations</p>
+    <a href="#" class="btn">Explore More</a>
+</header>
+
+<section class="columns">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et.</p>
+    <p>Integer nec odio. Praesent libero. Sed cursus ante dapibus.</p>
+    <p>Curabitur sodales ligula in libero.</p>
+    <p>Sed dignissim lacinia nunc.</p>
+    <p>Fusce nec tellus sed augue semper porta.</p>
+</section>
+
+<section class="icons">
+    <div class="icon-box">
+        <i class="fas fa-laptop-code"></i>
+        <h3>Development</h3>
+    </div>
+    <div class="icon-box">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Design</h3>
+    </div>
+    <div class="icon-box">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Responsive</h3>
+    </div>
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe Demo Page</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            height: 90vh;
+        }
+
+        /* Sidebar menu */
+        nav {
+            width: 20%;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        nav a {
+            display: block;
+            margin: 10px 0;
+            text-decoration: none;
+            color: #333;
+            padding: 8px;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background: #bbb;
+        }
+
+        /* Main iframe area */
+        .content {
+            width: 80%;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+<a href="./map.html"></a>
+<header>
+    <h1>HTML Iframe Demo</h1>
+    <p>Embedding Maps and External Pages</p>
+</header>
+
+<div class="container">
+
+    <!-- Navigation -->
+    <nav>
+        <h3>Menu</h3>
+        <a href="https://www.wikipedia.org" target="frame">Wikipedia</a>
+        <a href="https://www.example.com" target="frame">Example Site</a>
+        <a href="map.html" target="frame">View Map</a>
+    </nav>
+
+    <!-- Iframe -->
+    <div class="content">
+        <iframe name="frame" src="https://www.example.com"></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
