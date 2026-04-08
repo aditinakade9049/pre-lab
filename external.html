@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>External</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #ecf0f1;
+        }
+
+        .header {
+            background-color: #e67e22;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 80vh;
+            border: none;
+        }
+
+        .buttons {
+            text-align: center;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>🌐 External Viewer</h1>
+    </div>
+
+    <iframe id="frame" src="https://www.sbjit.edu.in/"></iframe>
+
+    <div class="buttons">
+        <button onclick="loadSite('sbjit')">SBJIT</button>
+        <button onclick="loadSite('restaurants')">restaurants</button>
+    </div>
+
+    <script>
+        function loadSite(site) {
+            if(site === "sbjit") {
+                document.getElementById("frame").src = "https://www.sbjit.edu.in/";
+            } else if(site === "restaurants") {
+                document.getElementById("frame").src = "https://www.restaurants.com/";
+            }
+        }
+    </script>
+
+</body>
+</html>
