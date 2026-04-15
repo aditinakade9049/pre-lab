@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Pasta Bella</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="#gallery">Gallery</a>
+    <a href="#menu">Menu</a>
+    <a href="#reservation">Book Table</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>La Pasta Bella 🍝</h1>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <h2>Ambiance</h2>
+    <div class="gallery">
+        <img src="https://images.squarespace-cdn.com/content/v1/5fac753a19904608da14a085/1606268963813-NSC3YINQPJPJ24PCK286/Tacos+%26+Beer+Interior+Vibe" style="width: 300px; height: 300px;">
+        <img src="https://www.atlascontractfurniture.com/media/widgetkit/ambiance-comfort-3-6fc7729460f605ed9c49ce8a218013fd.webp" style="width: 300px; height: 300px;">
+        <img src="https://cdn.shopify.com/s/files/1/1426/5736/files/glenov-brankovic-e4B5AvA7Jqo-unsplash.jpg?v=1744042771" style="width: 300px; height: 300px;">
+        <img src="https://www.shutterstock.com/image-photo/panoramic-restaurant-scene-that-looks-260nw-2673943689.jpg" style="width: 300px; height: 300px;">
+    </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+    <h2>Our Menu</h2>
+
+    <div class="menu-buttons">
+        <button onclick="filterMenu('all')">All</button>
+        <button onclick="filterMenu('veg')">Veg</button>
+        <button onclick="filterMenu('nonveg')">Non-Veg</button>
+    </div>
+
+    <div class="menu">
+        <div class="card veg">
+            <img src="https://3f4c2184e060ce99111b-f8c0985c8cb63a71df5cb7fd729edcab.ssl.cf2.rackcdn.com/media/16225/tomatomargheritapasta.jpg" style="width: 300px; height: 300px;">
+            <div class="overlay">
+                <h3>Margherita Pasta</h3>
+                <p>₹250</p>
+            </div>
+        </div>
+
+        <div class="card nonveg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5EuVYEm22v_-iy2vFQ-4niAT7Dk4uzs_CYA&s" style="width: 300px; height: 300px;">
+            <div class="overlay">
+                <h3>Chicken Alfredo</h3>
+                <p>₹350</p>
+            </div>
+        </div>
+
+        <div class="card veg">
+            <img src="https://www.healthyseasonalrecipes.com/wp-content/uploads/2022/03/easy-vegetable-lasagna-primavera-sq-037.jpg" style="width: 300px; height: 300px;">
+            <div class="overlay">
+                <h3>Veg Lasagna</h3>
+                <p>₹300</p>
+            </div>
+        </div>
+
+        <div class="card nonveg">
+            <img src="https://www.africanbites.com/wp-content/uploads/2023/01/IMG_2888.jpg" style="width: 300px; height: 300px;">
+            <div class="overlay">
+                <h3>Seafood Pasta</h3>
+                <p>₹450</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESERVATION -->
+<section id="reservation">
+    <h2>Reserve Your Table</h2>
+
+    <form onsubmit="return bookTable()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="date" required>
+        <input type="time" required>
+        <select required>
+            <option value="">Guests</option>
+            <option>2</option>
+            <option>4</option>
+            <option>6</option>
+        </select>
+        <button type="submit">Book Now</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 La Pasta Bella</p>
+</footer>
+
+<script>
+function filterMenu(type) {
+    let items = document.querySelectorAll('.card');
+    items.forEach(item => {
+        item.style.display =
+            (type === 'all' || item.classList.contains(type)) ? 'block' : 'none';
+    });
+}
+
+function bookTable() {
+    alert("Reservation Confirmed 🎉");
+    return false;
+}
+</script>
+
+</body>
+</html>
